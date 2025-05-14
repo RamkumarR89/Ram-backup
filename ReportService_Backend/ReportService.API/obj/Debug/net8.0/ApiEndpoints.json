@@ -1,0 +1,182 @@
+[
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "CreateSession",
+    "RelativePath": "api/Chat/create-session",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ReportService.Domain.DTOs.CreateSessionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "GetSession",
+    "RelativePath": "api/Chat/get-session/{sessionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "GetChartTypes",
+    "RelativePath": "api/Chat/GetChartTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "GetNextStep",
+    "RelativePath": "api/Chat/next-step/{sessionId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "SendMessage",
+    "RelativePath": "api/Chat/send-message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ReportService.Domain.DTOs.SendMessageRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "GetSessionMessages",
+    "RelativePath": "api/Chat/session/{sessionId}/messages",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sessionId",
+        "Type": "System.Int64",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "UpdateChartConfiguration",
+    "RelativePath": "api/Chat/update-chart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "config",
+        "Type": "ReportService.Domain.DTOs.ChartConfigurationDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "UpdateGeneratedSql",
+    "RelativePath": "api/Chat/update-generated-sql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ReportService.Domain.DTOs.UpdateGeneratedSqlRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "UpdateMessageOrGeneratedSql",
+    "RelativePath": "api/Chat/update-message-or-generated-sql",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ReportService.Domain.DTOs.UpdateGeneratedSqlRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "UpdateReportName",
+    "RelativePath": "api/Chat/update-report-name",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ReportService.Domain.DTOs.UpdateReportNameRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ReportService.Api.Controllers.ChatController",
+    "Method": "GetUserSessions",
+    "RelativePath": "api/Chat/user-sessions/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[ReportService.Domain.DTOs.ChatSessionDto, ReportService.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

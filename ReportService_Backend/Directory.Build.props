@@ -1,0 +1,12 @@
+<Project>
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EntityFrameworkVersion>8.0.3</EntityFrameworkVersion>
+    <AutoMapperVersion>12.0.1</AutoMapperVersion>
+  </PropertyGroup>
+</Project> 

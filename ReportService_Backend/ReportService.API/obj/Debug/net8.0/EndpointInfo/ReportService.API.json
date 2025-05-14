@@ -1,0 +1,568 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "ReportService.API",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Chat/create-session": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSessionRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSessionRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateSessionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/get-session/{sessionId}": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/send-message": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/session/{sessionId}/messages": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/update-generated-sql": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/update-message-or-generated-sql": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGeneratedSqlRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/update-chart": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChartConfigurationDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChartConfigurationDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChartConfigurationDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/user-sessions/{userId}": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatSessionDto"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatSessionDto"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatSessionDto"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Chat/next-step/{sessionId}": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "parameters": [
+          {
+            "name": "sessionId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/update-report-name": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportNameRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportNameRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateReportNameRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Chat/GetChartTypes": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ChartConfigurationDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ChatSessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Type": {
+            "$ref": "#/components/schemas/ChartTypeEnum"
+          },
+          "XaxisField": {
+            "type": "string",
+            "nullable": true
+          },
+          "YaxisField": {
+            "type": "string",
+            "nullable": true
+          },
+          "SeriesField": {
+            "type": "string",
+            "nullable": true
+          },
+          "SizeField": {
+            "type": "string",
+            "nullable": true
+          },
+          "ColorField": {
+            "type": "string",
+            "nullable": true
+          },
+          "Options": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true
+          },
+          "Filters": {
+            "type": "object",
+            "additionalProperties": { },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChartTypeEnum": {
+        "enum": [
+          "Bar",
+          "Line",
+          "Pie",
+          "Area",
+          "Scatter",
+          "Bubble",
+          "Radar",
+          "Polar",
+          "Funnel",
+          "Gauge",
+          "HeatMap",
+          "TreeMap",
+          "Sunburst",
+          "BoxPlot",
+          "Candlestick",
+          "Waterfall"
+        ],
+        "type": "string"
+      },
+      "ChatMessageDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ChatSessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          },
+          "Role": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "GeneratedSql": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChatSessionDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "UserId": {
+            "type": "string",
+            "nullable": true
+          },
+          "CreatedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "LastModifiedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "IsActive": {
+            "type": "boolean"
+          },
+          "Messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ChatMessageDto"
+            },
+            "nullable": true
+          },
+          "ReportName": {
+            "type": "string",
+            "nullable": true
+          },
+          "MeasuredValues": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MeasuredValueDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateSessionRequest": {
+        "required": [
+          "ReportName",
+          "UserId"
+        ],
+        "type": "object",
+        "properties": {
+          "UserId": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "ReportName": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "MeasuredValueDto": {
+        "type": "object",
+        "properties": {
+          "Id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ChatSessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Name": {
+            "type": "string",
+            "nullable": true
+          },
+          "Description": {
+            "type": "string",
+            "nullable": true
+          },
+          "Query": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendMessageRequest": {
+        "required": [
+          "Message",
+          "SessionId"
+        ],
+        "type": "object",
+        "properties": {
+          "SessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "Message": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateGeneratedSqlRequest": {
+        "type": "object",
+        "properties": {
+          "SessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "GeneratedSql": {
+            "type": "string",
+            "nullable": true
+          },
+          "Message": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateReportNameRequest": {
+        "type": "object",
+        "properties": {
+          "SessionId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "ReportName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
